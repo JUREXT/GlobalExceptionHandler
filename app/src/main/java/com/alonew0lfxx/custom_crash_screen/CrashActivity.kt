@@ -12,10 +12,11 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import com.alonew0lfxx.custom_crash_screen.databinding.ActivityCrashBinding
 import com.alonew0lfxx.GlobalExceptionHandler
+import com.alonew0lfxx.custom_crash_screen.databinding.ActivityCrashBinding
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+
 @SuppressLint("SetTextI18n")
 
 class CrashActivity : AppCompatActivity() {
@@ -41,6 +42,7 @@ class CrashActivity : AppCompatActivity() {
                 binding.bReport.text = "Reported."
                 delay(1000)
                 finishAffinity()
+                startActivity(Intent(this@CrashActivity, MainActivity::class.java))
             }
         }
         binding.bRestartApp.setOnClickListener {
@@ -52,5 +54,4 @@ class CrashActivity : AppCompatActivity() {
     companion object {
         private const val TAG = "CrashActivity"
     }
-
 }

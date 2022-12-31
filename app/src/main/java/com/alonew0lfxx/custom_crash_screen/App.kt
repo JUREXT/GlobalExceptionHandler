@@ -9,10 +9,8 @@ import android.app.Application
 import com.alonew0lfxx.GlobalExceptionHandler
 
 class App : Application() {
-
     override fun onCreate() {
         super.onCreate()
-        GlobalExceptionHandler.initialize(this,CrashActivity::class.java)
+        GlobalExceptionHandler.initialize(this, CrashActivity::class.java)
     }
-
 }

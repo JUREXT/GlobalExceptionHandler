@@ -7,7 +7,6 @@
 package com.alonew0lfxx.custom_crash_screen
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.alonew0lfxx.custom_crash_screen.databinding.ActivityMainBinding
 
@@ -27,5 +26,4 @@ class MainActivity : AppCompatActivity() {
             throw Error("Hello, I'm the crash!")
         }
     }
-
 }
